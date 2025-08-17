@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kejutan Spesial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="hearts-background">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <audio id="musik-kejutan" src="music/latar-belakang.mp3" loop></audio>
+
+    <div id="password-screen" class="screen active">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ae/91/ae/ae91ae74ff12f9253050657628007e8c.jpg" alt="header-image" class="header-image">
+            <p class="prompt">penasaran ga sih? yuk isi passwordnya 😉</p>
+            <div id="password-display" class="password-display"></div>
+            <p class="clue">clue: tanggal hari spesial inii dong sayangg😚</p>
+            <div class="keypad">
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button class="key backspace"><i class="fas fa-delete-left"></i></button>
+                <button class="key">0</button>
+                <button id="submit-btn" class="key submit">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-screen" class="screen">
+        <div class="letter-card">
+            <div class="cover">
+                <div class="cover-front">
+                    <img src="images/gambar6.jpg" alt="cute-gif-1" class="cute-gif">
+                    <p>HALOOO SAYANGKUUUU<br>😚😚</p>
+                </div>
+                <div class="cover-back"></div>
+            </div>
+            <div class="inner-card">
+                <img src="images/gambar8.jpg" alt="flowers" class="flowers-gif">
+                <div class="message-content">
+                    <p>mauu liatt isinyaa tidakkk hehehe?</p>
+                    <div class="buttons">
+                        <button id="yes-btn">mauuu😚</button>
+                        <button id="no-btn">gaa ahh☹</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="force-screen" class="screen force-message">
+    <img src="images/gambar9.jpg" alt="force-gif">
+        <p>mauu gamauu, haruss liatt😌😌</p>
+    </div>
+
+    <div id="final-screen" class="screen final-message">
+       <img src="images/gambar7.jpg" alt="final-gif">
+        <p>hihihihi , ayooo kita liat pesannyaaaa 💖</p>
+    </div>
+
+   <div id="song-screen" class="screen">
+    <div class="song-container">
+        
+        <div class="personal-message">
+            <p class="handwritten">
+		Happyy Birthdayy Sayangkuuu 🥳🥳🥳 <br><br>
+		cieee udahhh 22 tahunn ajaa niii, ga kerasaa banget yaa <br>
+                semoga di umur yg ke 22 ini dirimu semakin rajin ibadahnya, terus makin berbakti sama orangtua <br>
+		oiyaa, dijaga kesehatannyaa yaa😠 <br>
+		minum kopii jangan tiap hariii , <br>
+		ga baguss tapi kalo sekali-sekali its okey lahh <br>
+		jangan maksain makan pedes terus yaa, biarpun itu enak tapi nnti perutmuu sakitt <br>
+		tapi sekali-sekali gapapaa dehh, asal jangan sering-sering yaa <br>
+		dirimuu jangan nakal-nakal disituu yaa <br>
+		jangan sering ngelawann kalo dibilanginn😠 <br><br>
+		dan semogaa dirimu dapet keterima kerjaa di tempat yang sesuai dengan yang dirimu mau selama inii <br>
+		jangann patah semangat kalo kadang hasilnya ga sesuai sama yang kita mauu yaa <br>
+		haruss tetap semangatt dalam apa pun ituu <br>
+		dan yang paling pentingg selaluu bersyukur <br>
+		okeyyy sayanggg??? <br>
+		okeyy lah kan dirimuu pinterr hehehe <br><br>
+		inget aku disini selalu ngedukung dirimuu 🫶 <br>
+		akuu minta maaf kalau selama kita ngejalanin hubungan aku belum bisa ngertiin dirimuu ataupun banyak tingkahnya:)) <br>
+		makasihh udah mau bareng-bareng sampai sekarangg, makasihhhh bangetttt <br>
+		aku beruntungg bangettt bisa dapet dirimuuu, pakett komplit kalau aku sering bilangg hehehe <br><br>
+
+		maaf yaa aku belum bisa ngerayain bareng dirimu di tahun inii :( <br>
+		semoga di tahun depan kita bisa ngerayain bareng yaaa <br><br><br>
+		LOVEEE UUUU SAYANGGGG🥰🥰🥰 <br>
+            </p>
+        </div>
+    </div>
+</div>
+    
+    <div id="confetti"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

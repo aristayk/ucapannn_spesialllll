@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Kalam:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    background: linear-gradient(-45deg, #a8d0e6, #89c2d9, #61a5c2, #3b88a8);
+    background-size: 400% 400%;
+    
+    animation: gradient-animation 20s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Password Screen */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+}
+
+.header-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.prompt {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.password-display {
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px;
+    font-size: 2em;
+    letter-spacing: 10px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    height: 40px;
+    color: #555;
+}
+
+.clue {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.key {
+    padding: 15px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 15px;
+    background-color: #EBF5FF;
+    color: #5A98D6;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.key:active {
+    background-color: #D2E7FF;
+}
+
+.backspace, .submit {
+    font-size: 1.2em;
+}
+
+/* Card Screen */
+.letter-card {
+    perspective: 1500px;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: left;
+}
+
+.letter-card:hover .cover {
+    transform: rotateY(-170deg);
+}
+
+.cover-front, .cover-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #E0F7FA; /* Warna diubah ke biru muda */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cover-front .cute-gif {
+    width: 150px;
+    height: 150px;
+}
+.cover-front p {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #444;
+}
+
+.cover-back {
+    background: #B2EBF2; /* Warna diubah ke biru muda */
+    transform: rotateY(180deg);
+}
+
+.inner-card {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flowers-gif {
+    width: 100px;
+    margin-bottom: 20px;
+}
+.message-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+.buttons button {
+    padding: 10px 25px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#yes-btn { background-color: #89c2d9; color: white; } /* Warna diubah ke biru */
+#no-btn { background-color: #F0F0F0; color: #888; }
+.buttons button:hover { transform: scale(1.05); }
+
+
+/* Force & Final Message Screens */
+.force-message, .final-message {
+    text-align: center;
+}
+.force-message img, .final-message img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+.force-message p, .final-message p {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #555;
+    padding: 0 20px;
+}
+
+/* Song Screen (sekarang jadi Final Message Screen) */
+.song-container {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.personal-message {
+    margin-top: 20px;
+    color: #555;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 15px;
+    text-align: left;
+}
+
+.handwritten {
+    font-family: 'Kalam', cursive;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Confetti */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ======================================= */
+/* KODE UNTUK EFEK HATI MELAYANG       */
+/* ======================================= */
+
+.hearts-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -10vh;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: rotate(-45deg);
+    animation: float-heart 15s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes float-heart {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+.heart:nth-child(1) { left: 10%; animation-duration: 13s; animation-delay: 0s; transform: scale(0.6) rotate(-45deg); }
+.heart:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; transform: scale(0.8) rotate(-45deg); }
+.heart:nth-child(3) { left: 30%; animation-duration: 18s; animation-delay: 4s; transform: scale(0.5) rotate(-45deg); }
+.heart:nth-child(4) { left: 40%; animation-duration: 12s; animation-delay: 1s; transform: scale(0.7) rotate(-45deg); }
+.heart:nth-child(5) { left: 50%; animation-duration: 20s; animation-delay: 5s; transform: scale(0.9) rotate(-45deg); }
+.heart:nth-child(6) { left: 60%; animation-duration: 14s; animation-delay: 3s; transform: scale(0.6) rotate(-45deg); }
+.heart:nth-child(7) { left: 70%; animation-duration: 17s; animation-delay: 6s; transform: scale(1.0) rotate(-45deg); }
+.heart:nth-child(8) { left: 80%; animation-duration: 11s; animation-delay: 2.5s; transform: scale(0.8) rotate(-45deg); }
+.heart:n-child(9) { left: 90%; animation-duration: 16s; animation-delay: 7s; transform: scale(0.5) rotate(-45deg); }
+.heart:nth-child(10) { left: 5%; animation-duration: 19s; animation-delay: 1.5s; transform: scale(0.7) rotate(-45deg); }
