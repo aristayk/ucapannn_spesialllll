@@ -9,39 +9,19 @@
 </head>
 <body>
     <div class="hearts-background">
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
+        <div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div>
     </div>
 
-    <audio id="musik-kejutan" src="./music/latar-belakang.mp3" loop></audio>
+    <audio id="musik-kejutan" src="./music/musik1.mp3" loop></audio>
 
     <div id="password-screen" class="screen active">
         <div class="card">
-            <img src="https://i.pinimg.com/736x/ae/91/ae/ae91ae74ff12f9253050657628007e8c.jpg" alt="header-image" class="header-image">
+    <img src="./images/gambarawal.jpeg" alt="header-image" class="header-image">
             <p class="prompt">penasaran ga sih? yuk isi passwordnya 😉</p>
             <div id="password-display" class="password-display"></div>
             <p class="clue">clue: tanggal hari spesial inii dong sayangg😚</p>
             <div class="keypad">
-                <button class="key">1</button>
-                <button class="key">2</button>
-                <button class="key">3</button>
-                <button class="key">4</button>
-                <button class="key">5</button>
-                <button class="key">6</button>
-                <button class="key">7</button>
-                <button class="key">8</button>
-                <button class="key">9</button>
-                <button class="key backspace"><i class="fas fa-delete-left"></i></button>
-                <button class="key">0</button>
-                <button id="submit-btn" class="key submit">Go</button>
+                <button class="key">1</button><button class="key">2</button><button class="key">3</button><button class="key">4</button><button class="key">5</button><button class="key">6</button><button class="key">7</button><button class="key">8</button><button class="key">9</button><button class="key backspace"><i class="fas fa-delete-left"></i></button><button class="key">0</button><button id="submit-btn" class="key submit">Go</button>
             </div>
         </div>
     </div>
@@ -81,37 +61,46 @@
    <div id="song-screen" class="screen">
     <div class="song-container">
         <div class="personal-message">
-            <p class="handwritten">
-		Happyy Birthdayy Sayangkuuu 🥳🥳🥳 <br><br>
-		cieee udahhh 22 tahunn ajaa niii, ga kerasaa banget yaa <br>
+            <div id="typing-text" class="handwritten"></div>
+            <div id="original-text" style="display: none;">
+                Happyy Birthdayy Sayangkuuu 🥳🥳🥳 <br><br>
+                cieee udahhh 22 tahunn ajaa niii, ga kerasaa banget yaa <br>
                 semoga di umur yg ke 22 ini dirimu semakin rajin ibadahnya, terus makin berbakti sama orangtua <br>
-		oiyaa, dijaga kesehatannyaa yaa😠 <br>
-		minum kopii jangan tiap hariii , <br>
-		ga baguss tapi kalo sekali-sekali its okey lahh <br>
-		jangan maksain makan pedes terus yaa, biarpun itu enak tapi nnti perutmuu sakitt <br>
-		tapi sekali-sekali gapapaa dehh, asal jangan sering-sering yaa <br>
-		dirimuu jangan nakal-nakal disituu yaa <br>
-		jangan sering ngelawann kalo dibilanginn😠 <br><br>
-		dan semogaa dirimu dapet keterima kerjaa di tempat yang sesuai dengan yang dirimu mau selama inii <br>
-		jangann patah semangat kalo kadang hasilnya ga sesuai sama yang kita mauu yaa <br>
-		haruss tetap semangatt dalam apa pun ituu <br>
-		dan yang paling pentingg selaluu bersyukur <br>
-		okeyyy sayanggg??? <br>
-		okeyy lah kan dirimuu pinterr hehehe <br><br>
-		inget aku disini selalu ngedukung dirimuu 🫶 <br>
-		akuu minta maaf kalau selama kita ngejalanin hubungan aku belum bisa ngertiin dirimuu ataupun banyak tingkahnya:)) <br>
-		makasihh udah mau bareng-bareng sampai sekarangg, makasihhhh bangetttt <br>
-		aku beruntungg bangettt bisa dapet dirimuuu, pakett komplit kalau aku sering bilangg hehehe <br><br>
-
-		maaf yaa aku belum bisa ngerayain bareng dirimu di tahun inii :( <br>
-		semoga di tahun depan kita bisa ngerayain bareng yaaa <br><br><br>
-		LOVEEE UUUU SAYANGGGG🥰🥰🥰 <br>
-            </p>
+                oiyaa, dijaga kesehatannyaa yaa😠 <br>
+                minum kopii jangan tiap hariii , <br>
+                ga baguss tapi kalo sekali-sekali its okey lahh <br>
+                jangan maksain makan pedes terus yaa, biarpun itu enak tapi nnti perutmuu sakitt <br>
+                tapi sekali-sekali gapapaa dehh, asal jangan sering-sering yaa <br>
+                dirimuu jangan nakal-nakal disituu yaa <br>
+                jangan sering ngelawann kalo dibilanginn😠 <br><br>
+                dan semogaa dirimu dapet keterima kerjaa di tempat yang sesuai dengan yang dirimu mau selama inii <br>
+                jangann patah semangat kalo kadang hasilnya ga sesuai sama yang kita mauu yaa <br>
+                haruss tetap semangatt dalam apa pun ituu <br>
+                dan yang paling pentingg selaluu bersyukur <br>
+                okeyyy sayanggg??? <br>
+                okeyy lah kan dirimuu pinterr hehehe <br><br>
+                inget aku disini selalu ngedukung dirimuu 🫶 <br>
+                akuu minta maaf kalau selama kita ngejalanin hubungan aku belum bisa ngertiin dirimuu ataupun banyak tingkahnya:)) <br>
+                makasihh udah mau bareng-bareng sampai sekarangg, makasihhhh bangetttt <br>
+                aku beruntungg bangettt bisa dapet dirimuuu, pakett komplit kalau aku sering bilangg hehehe <br><br>
+                maaf yaa aku belum bisa ngerayain bareng dirimu di tahun inii :( <br>
+                semoga di tahun depan kita bisa ngerayain bareng yaaa <br><br><br>
+                LOVEEE UUUU SAYANGGGG🥰🥰🥰 <br><br>
+		        inii beberapaa poto-poto kitaaa biar dirimuu ga lupa samakuuu biarpun kita lagi jauhhhh <br><br>
+            </div>
+            <div class="photo-gallery" style="display: none;">
+                <img src="./images/gbr1.jpg" alt="Kenangan 1"><img src="./images/gbr2.jpg" alt="Kenangan 2"><img src="./images/gbr3.jpg" alt="Kenangan 3"><img src="./images/gbr4.jpg" alt="Kenangan 4"><img src="./images/gbr5.jpg" alt="Kenangan 5"><img src="./images/gbr6.jpg" alt="Kenangan 6"><img src="./images/gbr7.jpg" alt="Kenangan 7"><img src="./images/gbr8.jpg" alt="Kenangan 8"><img src="./images/gbr9.jpg" alt="Kenangan 9"><img src="./images/gbr10.jpg" alt="Kenangan 10"><img src="./images/gbr11.jpg" alt="Kenangan 11"><img src="./images/gbr12.jpg" alt="Kenangan 12"><img src="./images/gbr13.jpg" alt="Kenangan 13"><img src="./images/gbr14.jpg" alt="Kenangan 14"><img src="./images/gbr15.jpg" alt="Kenangan 15"><img src="./images/gbr16.jpg" alt="Kenangan 16"><img src="./images/gbr17.jpg" alt="Kenangan 17"><img src="./images/gbr18.jpg" alt="Kenangan 18"><img src="./images/gbr19.jpg" alt="Kenangan 19"><img src="./images/gbr20.jpg" alt="Kenangan 20"><img src="./images/gbr21.jpg" alt="Kenangan 21"><img src="./images/gbr22.jpg" alt="Kenangan 22"><img src="./images/gbr23.jpg" alt="Kenangan 23"><img src="./images/gbr24.jpg" alt="Kenangan 24"><img src="./images/gbr25.jpg" alt="Kenangan 25"><img src="./images/gbr26.jpg" alt="Kenangan 26"><img src="./images/gbr27.jpg" alt="Kenangan 27"><img src="./images/gbr28.jpg" alt="Kenangan 28"><img src="./images/gbr29.jpg" alt="Kenangan 29"><img src="./images/gbr30.jpg" alt="Kenangan 30"><img src="./images/gbr31.jpg" alt="Kenangan 31"><img src="./images/gbr32.jpg" alt="Kenangan 32"><img src="./images/gbr33.jpg" alt="Kenangan 33"><img src="./images/gbr34.jpg" alt="Kenangan 34"><img src="./images/gbr35.jpg" alt="Kenangan 35"><img src="./images/gbr36.jpg" alt="Kenangan 36"><img src="./images/gbr37.jpg" alt="Kenangan 37"><img src="./images/gbr38.jpg" alt="Kenangan 38"><img src="./images/gbr39.jpg" alt="Kenangan 39"><img src="./images/gbr40.jpg" alt="Kenangan 40"><img src="./images/gbr41.jpg" alt="Kenangan 41"><img src="./images/gbr42.jpg" alt="Kenangan 42"><img src="./images/gbr43.jpg" alt="Kenangan 43"><img src="./images/gbr44.jpg" alt="Kenangan 44"><img src="./images/gbr45.jpg" alt="Kenangan 45"><img src="./images/gbr46.jpg" alt="Kenangan 46"><img src="./images/gbr47.jpg" alt="Kenangan 47"><img src="./images/gbr48.jpg" alt="Kenangan 48"><img src="./images/gbr49.jpg" alt="Kenangan 49"><img src="./images/gbr50.jpg" alt="Kenangan 50"><img src="./images/gbr51.jpg" alt="Kenangan 51"><img src="./images/gbr52.jpg" alt="Kenangan 52"><img src="./images/gbr53.jpg" alt="Kenangan 53">
+            </div>
         </div>
     </div>
 </div>
     
     <div id="confetti"></div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="./script.js"></script> 
 </body>

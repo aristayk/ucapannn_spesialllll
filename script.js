@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkPassword() {
         if (enteredPassword === correctPassword) {
-            // Musik tidak lagi diputar di sini
             switchScreen('password-screen', 'card-screen');
         } else {
             passwordDisplay.style.color = 'red';
@@ -60,11 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
             switchScreen('final-screen', 'song-screen');
             document.getElementById('confetti').innerHTML = ''; 
 
-            // MUSIK AKAN MULAI BERPUTAR DI SINI
             const musik = document.getElementById('musik-kejutan');
             if (musik) {
                 musik.play();
             }
+            
+            startTypingAnimation();
+
         }, 3000); 
     }
 
@@ -92,4 +93,67 @@ document.addEventListener('DOMContentLoaded', () => {
             confettiContainer.appendChild(confettiPiece);
         }
     }
+
+    // --- Fungsi Animasi Ketik ---
+    function startTypingAnimation() {
+        const originalTextElement = document.getElementById('original-text');
+        const typingTextElement = document.getElementById('typing-text');
+        const galleryElement = document.querySelector('.photo-gallery');
+
+        if (!originalTextElement || !typingTextElement) return;
+
+        const fullText = originalTextElement.innerHTML;
+        let index = 0;
+        typingTextElement.innerHTML = "";
+
+        function type() {
+            if (index < fullText.length) {
+                if (fullText.substring(index, index + 4) === '<br>') {
+                    typingTextElement.innerHTML += '<br>';
+                    index += 4;
+                } else {
+                    typingTextElement.innerHTML += fullText.charAt(index);
+                    index++;
+                }
+                const container = document.querySelector('.personal-message');
+                container.scrollTop = container.scrollHeight;
+                
+                setTimeout(type, 50); // Kecepatan mengetik
+            } else {
+                typingTextElement.classList.add('finished-typing');
+                
+                if (galleryElement) {
+                    galleryElement.style.display = 'flex';
+                }
+            }
+        }
+        type();
+    }
+
+    // --- Fungsi Lightbox (Zoom Gambar) ---
+    const galleryImages = document.querySelectorAll('.photo-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close-btn');
+
+    if (galleryImages.length > 0 && lightbox) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
 });
